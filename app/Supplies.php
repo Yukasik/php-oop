@@ -2,7 +2,8 @@
 
 namespace App;
 
-class Supplies {
+abstract class Supplies {
+    private $id;
     private $name;
     private $price;
     const SALE = 10;
@@ -35,11 +36,14 @@ class Supplies {
 
     public function __construct($id,  $name, $price)
     {
+        $this->id = $id;
         $this->name = $name;
         $this->setPrice($price);
     }
 
-    private function countDiscountPrice($price) {
+    protected function countDiscountPrice($price) {
         return $price - ($price * self::SALE / 100);
     }
+
+    abstract public function countCost($num);
 }

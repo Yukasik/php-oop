@@ -4,12 +4,17 @@ require_once('../vendor/autoload.php');
 use App\Student;
 use App\Supplies;
 use App\Tutor;
+use App\pieceSupplies;  
+use App\weightSupplies;
 
 $supplies = [
-    new Supplies(1, "чайник1", 2000),
-    new Supplies(2, "чайник2", 1000),
-    new Supplies(3, "чайник3", 1590),
-    new Supplies(4, "чайник4", 590)
+    new pieceSupplies(1, "чайник1", -2000),
+    new pieceSupplies(2, "чайник2", 1000),
+    new pieceSupplies(3, "чайник3", 1590),
+    new pieceSupplies(4, "чайник4", 590),
+
+    new weightSupplies(5, "чайник5", 100, "кг"),
+    new weightSupplies(6, "чайник6", 2,5, "л")
 ];
 
 foreach ($supplies as $supplie) {
