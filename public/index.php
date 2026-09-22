@@ -12,8 +12,9 @@ $supplies = [
     new Supplies(4, "чайник4", 590)
 ];
 
-foreach($supplies as $supplie){
-     echo "Цена: $supplie->$getPrice()";
+foreach ($supplies as $supplie) {
+    echo "Название: " . $supplie->getName() . "<br>";
+    echo "Цена: " . $supplie->getPrice() . "<br>";
 }
 
 // $student = new Student("ольга",  17);

@@ -5,7 +5,6 @@ namespace App;
 class Supplies {
     private $name;
     private $price;
-    private $id;
     const SALE = 10;
 
 
@@ -36,9 +35,8 @@ class Supplies {
 
     public function __construct($id,  $name, $price)
     {
-        $this->id = $id;
-        $this->getName($name);
-        $this->getPrice($price);
+        $this->name = $name;
+        $this->setPrice($price);
     }
 
     private function countDiscountPrice($price) {
